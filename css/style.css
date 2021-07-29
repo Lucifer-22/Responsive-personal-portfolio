@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+ /* ========== VARIABLE CSS ============= */
+ :root{
+    --header-height: 3rem;
+
+    /* ============ COLORS ================ */
+        /* DECIDE YOUR BROWSER THEME */
+    --hue-color: 250;  /* GREEN: 144,  Blue: 230, Purple: 250, Pink: 340 */
+
+        /* HSL Color Mode */
+    --first-color: hsl(var(--hue-color), 69%, 58%);
+    --first-color-second: hsl(var(--hue-color), 71%, 47%);
+    --first-color-alt: hsl(var(--hue-color), 55%, 50%);
+    --first-color-lighter: hsl(var(--hue-color), 90%, 82%);
+
+    --title-color: hsl(var(--hue-color), 10%, 15%);
+    --text-color: hsl(var(--hue-color), 10%, 40%);
+    --mainText: hsl(var(--hue-color), 10%, 20%);
+    --text-color-light: hsl(var(--hue-color), 10%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 88%);
+    --body-color: hsl(var(--hue-color), 66%, 99%);
+    --container-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 15%, 85%);
+    --scroll-thumb-color: hsl(var(--hue-color), 15%, 70%);
+    --gradient-color: linear-gradient(140deg, rgba(93,72,199,1) 0%, rgba(94,91,201,1) 40%, rgba(101,125,157,1) 100%);
+
+    /*  ================ FONT AND TYPOGRAPHY ============== */
+    --gullible-font: 'Maven Pro', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+    --robotomono-font: 'Roboto Mono', monospace;
+    --bogfat-font: 'Russo One', sans-serif;
+
+    /* 1rem = 16px, .5rem = 8px */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 14px;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /* FONT WEIGHT */
+    --font-medium: 500;
+    --font-semi-bold:600;
+    --font-bold: 700;
+
+    /* Margin Size - BOTTOM */
+    /* .25rem = 4px, .5rem= 8px, 1rem= 16px, .75rem= 12px */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*  ======== Z-index ========= */
+    --z-tooltip:10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+}
+/* FONT SIZE FOR LARGER DEVICES */
+@media screen  and (min-width: 968px){
+    :root{
+        --big-font-size: 3rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+    
+}
+
+/* =========== VARIABLE COLOR DARK THEME ============ */
+body.dark-theme{
+    /* HSL Color Mode */
+    --first-color: hsl(var(--hue-color), 69%, 58%); /* Not changed */
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --first-color-alt: hsl(var(--hue-color), 55%, 50%); /* Not changed */
+    --first-color-lighter: hsl(var(--hue-color), 90%, 82%); /* Not changed */
+
+    --title-color: hsl(var(--hue-color), 10%, 95%);
+    --text-color: hsl(var(--hue-color), 10%, 75%);
+    --mainText: hsl(var(--hue-color), 10%, 75%);
+    --text-color-light: hsl(var(--hue-color), 10%, 65%); /* Not changed */
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 30%, 14%);
+    --container-color: hsl(var(--hue-color), 30%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 10%, 50%);
+    --scroll-thumb-color: hsl(var(--hue-color), 15%, 32%);
+}
+
+/* ======= NAV BUTTONS DARK/LIGHT THEME ==================== */
+.nav__btns{
+    display: flex;
+    align-items: center;
+    padding-left: var(--mb-0-5);
+    margin: 0;
+    margin-top: -5px;
+}
+
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover{
+    color: var(--first-color);
+}
+
+/* ============== BASE ================ */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+}
+
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================= REUSABLE CSS CLASSES =====================  */
+.section{
+    padding: 2rem 0 4rem;
+    margin: auto;
+    min-height: 80vh;
+}
+
+.section__title{
+    font-size: var(--big-font-size);
+    font-family: var(--gullible-font);
+}
+
+.section__subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section__title, 
+.section__subtitle{
+    text-align: center;
+}
+
+/*================================ LAYOUT ============================= */
+.container{
+    margin-right: var(--mb-1);
+}
+
+.grid{
+    display: grid;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+
+/* ===================== NAV STYLING ================== */
+.nav{
+    /* max-width: 968px; */
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+}
+
+.nav__logo,
+.nav__toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: var(--h3-font-size);
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.nav__toggle:hover{
+    color: var(--first-color);
+}
+
+.navbar-brand{
+    font-family: var(--robotomono-font);
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        left:0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .5s;
+    }
+}
+
+.nav__list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__icon{
+    font-size: 1.2rem;
+}
+
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+
+.nav__close:hover{
+    color: var(--first-color-alt);
+}
+
+/* SHOW MENU */
+.show-menu{
+    bottom: 0;
+}
+
+/* Active link */
+.active-link{
+    color: var(--first-color);
+}
+
+/* Change background header */
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}

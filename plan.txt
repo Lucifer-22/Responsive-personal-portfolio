@@ -2,7 +2,8 @@ header
 Main
     HOME
     ABOUT
-    SKILLS AND EXPERIENCE
+    SKILLS 
+    EDUCATION & EXPERIENCE
     PORTFOLIO
     CONTACT US
 footer
