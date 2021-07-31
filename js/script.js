@@ -41,6 +41,16 @@ if(navToggle){
     })
 } 
 
+// ================  MENU HIDE  =============
+/*  Validate if the constant exists */
+if(navClose){
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu')
+    })
+} 
+
+
+
 console.log("MENU Y SETTING WORKING!")
 //===================================== REMOVE MENU PRORFILE =========================
 const navLink = document.querySelectorAll('.nav__link')
@@ -54,5 +64,16 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 console.log("Remove menu profile is working!")
 
+
+//===================================== Typewriter Effect =========================
+
+
+new Typewriter('#typewriter', {
+  strings: ['Biplov Jha', 'Web-developer', 'Electrical-Engineer', 'e-Tutor', 'Author', ''],
+  autoStart: true,
+  loop: true,
+  cursor: "|"
+});
+console.log("Typewriter effect is working!")
 
 
