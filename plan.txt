@@ -9,10 +9,7 @@ Main
 footer
 
 
-ABOUT
+SKILLS
 
-left-> image
-
-right-> text
-
-below image: -> EXPERIENCE
+card----> software skills
+card -> Designs
