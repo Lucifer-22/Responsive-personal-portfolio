@@ -7,3 +7,12 @@ Main
     PORTFOLIO
     CONTACT US
 footer
+
+
+ABOUT
+
+left-> image
+
+right-> text
+
+below image: -> EXPERIENCE
