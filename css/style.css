@@ -530,3 +530,120 @@ img{
     display: flex;
     justify-content: center;
 }
+
+/* ===================== SKILLS ================== */
+
+/* .skills__container{
+
+} */
+
+.skills__container-card{
+    position: relative;
+    display: grid;
+    width: auto;
+    height: auto;
+    padding-bottom: var(--mb-0-75);
+    margin: auto;
+    margin-bottom: var(--mb-2);
+}
+
+.skills__container-card:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card_skill{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    padding: 2em;
+    text-shadow: 0 0 1em transparent(black, 0.5);
+    backdrop-filter: blur(20px);
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+}
+.card_skill::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:var(--first-color-lighter);
+    clip-path:circle(100px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.card_skill:hover::before{
+    clip-path: circle(280px at 80% -20%);
+    transition: scale(1.08);
+}
+
+.card_skill::after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: var(--h2-font-size);
+    font-style: italic;
+    color: var(--text-color);
+}
+.imgBx{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+    transform: translate( 5%, -10%);
+    object-fit: fill;
+}
+
+.card_skill:hover .imgBx{
+    width: 150px;
+    height: 150px;
+    transform: translate(-20%, -10%);
+}
+
+
+.contentBx{
+    display: flex;
+    align-content: space-between;
+    text-align: center;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transform: scale(0.0);
+    transition: 1s;
+}
+
+.card_skill:hover .contentBx{
+    display: flex;
+    height: 100%;
+    width: 70%;
+    position: relative;
+    object-fit: cover;
+    text-align: center;
+    transform: translate(-42%, 92%);
+    transition: 1.5s;
+}
+
+.cardskill .contentBx h2{
+    position: relative;
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.shadow2{
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
