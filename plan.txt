@@ -13,3 +13,19 @@ SKILLS
 
 card----> software skills
 card -> Designs
+
+
+Timeline Designs
+
+Educations    EXPERIENCE
+
+line - date
+card - Title
+        Institute
+        Details - unfolded
+
+PORTFOLIO
+________
+
+
+<   > 
