@@ -1040,3 +1040,132 @@ img{
 	  width: 30px;
 	}
   }
+
+  /* ===================== CONTACT SECTION ================== */
+
+  .contact_mail{
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-1-5);
+    width: 90%;
+  }
+
+  .contact__container{
+    row-gap: 2rem;
+    width:auto;
+  }
+
+  .contact__information{
+    display: flex;
+    margin-bottom: var(--mb-2);
+  }
+
+  .contact__icon{
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+
+  .contact__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  .contact__subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+  }
+
+  /* Form */
+
+  .contact-form{
+    position: relative;
+    z-index: 1;
+  }
+
+  form{
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  form input, form textarea{
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    -moz-border-radius: 8px;
+    -webkit-border-radius:8px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: var(--roboto-font);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    resize: none;
+  }
+
+  form input:focus, form textarea:focus {
+    -moz-box-shadow: 0 0px 2px #e74c3c !important;
+    -webkit-box-shadow: 0 1px 1px #e74c3c !important;
+    box-shadow: 0 1px 1px #e74c3c !important;
+  }
+
+  form #input-submit{
+    color: white;
+    background: #e74c3c;
+    cursor: pointer;
+  }
+
+  form #input-submit:hover{
+    -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+    -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+    box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  }
+
+  form textarea{
+    height: 130px;
+  }
+
+  .cf:before,
+  .cf:after{
+    content: '';
+    display: table;
+  }
+
+  .cf::after{
+    clear: both;
+  }
+
+  .send-message{
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: var(--mb-0-5);
+    transition: all 0.5s;
+  }
+
+  .send-message:hover{
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  }
+
+  .send-message:hover i{
+    padding-left: 15px;
+    transition: all 0.5s;
+  }
+
+  .form_button{
+    border: none;
+  }
+
+  
